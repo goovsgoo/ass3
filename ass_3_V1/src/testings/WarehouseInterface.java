@@ -28,3 +28,30 @@ public interface WarehouseInterface {
 	public void acquireMaterial(RepairMaterial repairMaterial);
 	
 }
+
+/*
+package restaurant.passives;
+
+
+ * 2.5 Warehouse
+
+Found in: Management
+
+This object contains: (1) a collection of available kitchen tools (2) a collection of available ingredients.
+This warehouse is the shared storage component where the different chefs acquire their tools and needed ingredients from.
+
+You may assume the warehouse contains enough ingredients and kitchen tools in order to successfully complete the simulation process.
+
+
+
+public interface WarehouseInterface {
+
+	
+	//this method simulates a chef asking to take what needed for a certain dish.
+	public void acquire(Dish dish);
+	
+	//this method simulates a chef returning the tools used to prepare a dish.
+	public void release(Dish dish);
+	
+}
+ */
