@@ -1,4 +1,6 @@
+//TODO edit comments
 package testings;
+//TODO create package and change the imported list accordingly
 
 import java.util.ArrayList;
 
@@ -10,11 +12,11 @@ import restaurant.passives.WarehouseInterface;
 
 /**
  * 
- * @author Shimrit Zabib and Itai Sanders
- * the Warehouse class simulates the restaurant's storage.
+ * @author Meni & Yoed
+ * the Warehouse class simulates the REIT's maintenance storage.
  * 
  * it holds two databases:
- * 		ArrayList<KitchenTool> - list of tools being implemented as semaphores. 
+ * 		ArrayList<repair> - list of tools being implemented as semaphores. 
  * 		ArrayList<Ingredient> - list of ingredients.
  *  
  * the class offers two public methods:
@@ -24,13 +26,13 @@ import restaurant.passives.WarehouseInterface;
  */
 public class Warehouse implements WarehouseInterface {
 	
-	private ArrayList<KitchenTool> tools;
-	private ArrayList<Ingredient> ingredients;
+	private ArrayList<RepairTool> tools;
+	private ArrayList<RepairMaterial> material;
 
 	
 	public Warehouse(){
-		tools = new ArrayList<KitchenTool>();
-		ingredients = new ArrayList<Ingredient>();
+		tools = new ArrayList<RepairTool>();
+		material = new ArrayList<RepairMaterial>();
 	}
 	
 	/**
@@ -38,7 +40,7 @@ public class Warehouse implements WarehouseInterface {
 	 * the method calls for the appropriate tools' acquire() method.
 	 * @param dish to acquire tools and ingredients for.
 	 */
-	public void acquire(Dish dish) {
+	public void acquire(Repair repair) {
 		// TODO Auto-generated method stub
 
 	}
@@ -48,7 +50,7 @@ public class Warehouse implements WarehouseInterface {
 	 * the method calls for the appropriate tools' release() method.
 	 * @param dish which order was finished and it's tools are released.
 	 */
-	public void release(Dish dish) {
+	public void release(Repair repair) {
 		// TODO Auto-generated method stub
 
 	}
@@ -57,7 +59,7 @@ public class Warehouse implements WarehouseInterface {
 	 * this method adds a new KitchenTool to the Warehouse.
 	 * @param tool to be added.
 	 */
-	protected void addTool(KitchenTool tool){
+	protected void addTool(RepairTool tool){
 		// TODO
 	}
 	
@@ -65,7 +67,7 @@ public class Warehouse implements WarehouseInterface {
 	 * this method adds a new ingredient to the Warehouse.
 	 * @param ingredient to be added.
 	 */
-	protected void addIngredient(Ingredient ingredient){
+	protected void addMaterial(RepairMaterial material){
 		// TODO
 	}
 
