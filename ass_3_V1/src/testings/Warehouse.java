@@ -7,19 +7,18 @@ import REIT.passives.RepairMaterial;
 import REIT.passives.RepairTool;
 import REIT.passives.WarehouseInterface;
 
-//TODO edit comments
 /**
  * 
  * @author Meni & Yoed
  * the Warehouse class simulates the REIT's maintenance storage.
  * 
  * it holds two databases:
- * 		ArrayList<repair> - list of tools being implemented as semaphores. 
- * 		ArrayList<Ingredient> - list of ingredients.
+ * 		ArrayList<RepairTool> - list of tools being implemented as semaphores. 
+ * 		ArrayList<RepairMaterial> - list of materials.
  *  
  * the class offers two public methods:
- * 		acquire(Dish dish) - for all tools and ingredients in Dish, calls for the tools' acquire() method and subtracts the ingredients' quantity.
- * 		release(Dish dish) - for all tools and ingredients in Dish, calls for the tools' release().
+ * 		acquire(RepairRequirements repairRequirements) - for all tools and materials in the repairRequirements, calls for the tools' acquire() method and subtracts the material' quantity.
+ * 		release(RepairRequirements repairRequirements) - for all tools and materials in Dish, calls for the tools' release().
  * 
  */
 public class Warehouse implements WarehouseInterface {
