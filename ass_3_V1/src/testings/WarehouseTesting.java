@@ -15,24 +15,23 @@ public class WarehouseTesting {
 	RepairTool tool2;
 	RepairMaterial material1;
 	RepairMaterial material2;
-	Repair repair;
-	//OrderOfDish order; ???????????????? equivalent ?????
+	RepairRequirements repairRequirements;
 	
 	
 	@Before
 	public void setUp() throws Exception {
 		wh = new WarehouseTester();
-		tool1 = new RepairMaterial("tool1", 2);
-		tool2 = new RepairMaterial("tool2", 4);
+		tool1 = new RepairTool("tool1", 2);
+		tool2 = new RepairTool("tool2", 4);
 		material1 = new RepairMaterial("material1", 6);
 		material2 = new RepairMaterial("material2", 9);
 		wh.addTool(tool1);
 		wh.addTool(tool2);
 		wh.addMaterial(material1);
 		wh.addMaterial(material2);
-		repair = new Repair("repairOrder");
-		repair.addTool("tool2", 1);
-		repair.addMaterial("material2", 2);
+		repairRequirements = new RepairRequirements("repairOrder");
+		repairRequirements.addTool("tool2", 1);
+		repairRequirements.addMaterial("material2", 2);
 	}
 
 	@After
@@ -47,7 +46,7 @@ public class WarehouseTesting {
 		int beforeM2 = wh.materialQantity(1);
 		
 		// tests that tool2 and material2 and only them were acquired.
-		wh.acquire(repair);
+		wh.acquire(repairRequirements);
 		assertEquals(beforeT1, wh.toolAvailability(0));
 		assertEquals(beforeM1, wh.materialQantity(0));
 		assertEquals(beforeT2-1, wh.toolAvailability(1));
@@ -62,7 +61,7 @@ public class WarehouseTesting {
 		int beforeM2 = wh.materialQantity(1);
 
 		// tests that tool2 and only tool2 was released.
-		wh.release(repair);
+		wh.release(repairRequirements);
 		assertEquals(beforeT1, wh.toolAvailability(0));
 		assertEquals(beforeM1, wh.materialQantity(0));
 		assertEquals(beforeT2+1, wh.toolAvailability(1));

@@ -2,10 +2,9 @@ package REIT.testing;
 
 import java.util.ArrayList;
 
-import REIT.passives.Repair;
+import REIT.passives.RepairRequirements;
 import REIT.passives.RepairMaterial;
 import REIT.passives.RepairTool;
-import REIT.passives.OrderOfDish; // ????????????? equivalent ???????????????
 import REIT.passives.WarehouseInterface;
 
 //TODO edit comments
@@ -35,27 +34,27 @@ public class Warehouse implements WarehouseInterface {
 	}
 	
 	/**
-	 * this method simulates a chef asking to take what needed for a certain dish.
+	 * this method simulates a maintenance man asking to take what needed for a certain asset repair.
 	 * the method calls for the appropriate tools' acquire() method.
-	 * @param dish to acquire tools and ingredients for.
+	 * @param repairRequirements of the tools and materials needed to be acquired.
 	 */
-	public void acquire(Repair repair) {
+	public void acquire(RepairRequirements repairRequirements) {
 		// TODO Auto-generated method stub
 
 	}
 
 	/**
-	 * this method simulates a chef returning the tools used to prepare a dish.
+	 * this method simulates a maintenance man returning the tools used to fix an asset.
 	 * the method calls for the appropriate tools' release() method.
-	 * @param dish which order was finished and it's tools are released.
+	 * @param repairRequirements which was used and its tools are released.
 	 */
-	public void release(Repair repair) {
+	public void release(RepairRequirements repairRequirements) {
 		// TODO Auto-generated method stub
 
 	}
 
 	/**
-	 * this method adds a new KitchenTool to the Warehouse.
+	 * this method adds a new repair tool to the Warehouse.
 	 * @param tool to be added.
 	 */
 	protected void addTool(RepairTool tool){
@@ -63,8 +62,8 @@ public class Warehouse implements WarehouseInterface {
 	}
 	
 	/**
-	 * this method adds a new ingredient to the Warehouse.
-	 * @param ingredient to be added.
+	 * this method adds a new material to the Warehouse.
+	 * @param material to be added.
 	 */
 	protected void addMaterial(RepairMaterial material){
 		// TODO

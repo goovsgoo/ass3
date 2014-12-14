@@ -32,7 +32,7 @@ public class WarehouseTester extends Warehouse {
 	}
 	
 	protected int toolAvailability(int i){
-		return tools.get(i).availablePermits();
+		return tools.get(i).quantity();
 	}
 	
 	protected int materialQantity(int i){
