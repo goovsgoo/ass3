@@ -13,7 +13,7 @@ import REIT.passives.WarehouseInterface;
  * the Warehouse class simulates the REIT's maintenance storage.
  * 
  * it holds two databases:
- * 		ArrayList<RepairTool> - list of tools being implemented as semaphores. 
+ * 		ArrayList<RepairTool> - list of tools being implemented with semaphores. 
  * 		ArrayList<RepairMaterial> - list of materials.
  *  
  * the class offers two public methods:
