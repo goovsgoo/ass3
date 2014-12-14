@@ -1,10 +1,9 @@
-package testings;
-//TODO packeges
+package REIT.testing;
 
 import java.util.ArrayList;
 
-import restaurant.passives.Ingredient;
-import restaurant.passives.KitchenTool;
+import REIT.passives.RepairMaterial;
+import REIT.passives.RepairTool;
 
 public class WarehouseTester extends Warehouse {
 	
@@ -28,7 +27,7 @@ public class WarehouseTester extends Warehouse {
 		return tools.get(i);
 	}
 	
-	protected RepairMaterial getMaterials(int i){
+	protected RepairMaterial getMaterial(int i){
 		return materials.get(i);
 	}
 	
@@ -36,11 +35,11 @@ public class WarehouseTester extends Warehouse {
 		return tools.get(i).availablePermits();
 	}
 	
-	protected int materialsQantity(int i){
+	protected int materialQantity(int i){
 		return materials.get(i).quantity();
 	}
 	
-	protected void cleare(){
+	protected void clear(){
 		tools.clear();
 		materials.clear();
 	}

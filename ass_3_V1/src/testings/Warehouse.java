@@ -1,15 +1,14 @@
-//TODO edit comments
-package testings;
-//TODO create package and change the imported list accordingly
+package REIT.testing;
 
 import java.util.ArrayList;
 
-import restaurant.passives.Dish;
-import restaurant.passives.Ingredient;
-import restaurant.passives.KitchenTool;
-import restaurant.passives.OrderOfDish;
-import restaurant.passives.WarehouseInterface;
+import REIT.passives.Repair;
+import REIT.passives.RepairMaterial;
+import REIT.passives.RepairTool;
+import REIT.passives.OrderOfDish; // ????????????? equivalent ???????????????
+import REIT.passives.WarehouseInterface;
 
+//TODO edit comments
 /**
  * 
  * @author Meni & Yoed
@@ -27,12 +26,12 @@ import restaurant.passives.WarehouseInterface;
 public class Warehouse implements WarehouseInterface {
 	
 	private ArrayList<RepairTool> tools;
-	private ArrayList<RepairMaterial> material;
+	private ArrayList<RepairMaterial> materials;
 
 	
 	public Warehouse(){
 		tools = new ArrayList<RepairTool>();
-		material = new ArrayList<RepairMaterial>();
+		materials = new ArrayList<RepairMaterial>();
 	}
 	
 	/**

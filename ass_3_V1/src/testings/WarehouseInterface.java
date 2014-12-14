@@ -1,5 +1,4 @@
-package testings; 
-// TODO we must create package
+package REIT.testing; 
 
 /*
  *
